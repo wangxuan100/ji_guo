@@ -1,0 +1,54 @@
+.register-div {
+    width: 1400px;
+    height: 600px;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+  }
+  .register-div .register-box {
+    position: absolute;
+    width: 1200px;
+    height: 550px;
+    margin: 25px 100px;
+    background-color: #ffffff;
+  }
+  .register-div .register-box .register-content {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    border-left: 4px solid #f9503e;
+    margin-top: 10px;
+  }
+  .register-div .register-box form {
+    width: 400px;
+    margin: 40px auto ;
+    position: relative;
+  }
+  .register-div .register-box form input {
+    box-sizing: border-box;
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    margin: 20px;
+  }
+  .register-div .register-box form button {
+    box-sizing: border-box;
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fe5341;
+    font-size: 20px;
+    color: #fff;
+    margin: 20px;
+  }
+  #error_box{
+    position: absolute;
+    top:240px ;
+    left: 68px;
+}
