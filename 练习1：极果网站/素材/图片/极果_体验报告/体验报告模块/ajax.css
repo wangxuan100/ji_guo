@@ -1,0 +1,46 @@
+.unnm{
+    width: 700px;
+    height: 50px;
+    border: 1px solid rgb(175, 172, 172);
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+    color: rgb(175, 172, 172);
+}
+.kuang img{
+    margin: 10px 0;
+}
+.kuang h5,span{
+  margin: 20px 1px;
+  color: rgb(175, 172, 172);
+}
+.fang  span{
+    float:right;
+    color: rgb(175, 172, 172);
+    width: 80px;
+    margin: -10px 10px;
+    text-align: center;
+}
+.a{
+    background: url(../../图片/css/img/reply.png) no-repeat 0px 5px;
+}
+.b{
+    background: url(../../图片/css/img/zan.png) no-repeat 0px 5px;
+}
+.playMore{
+    width: 250px;
+    height: 50px;
+    /* border: 1px solid #000; */
+    text-align: center;
+    line-height: 50px;
+    margin-left: 235px;
+    position: relative;
+}
+.playMore img{
+    position: absolute;
+    top: 23px;
+    left: 50px;
+}
+.playMore a{
+    color: red;
+}

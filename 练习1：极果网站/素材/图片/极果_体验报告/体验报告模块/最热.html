@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./最热.css">
+    <link rel="stylesheet" href="./ajax.css">
+    <link rel="stylesheet" href="./头部尾部.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+    <div class="head" id="top11">
+        <img src="../图片/img/logonew.png" alt="">
+        <ul>
+          <li><a href="../../首页/index.html">首页</a></li>
+          <li><a href="../../index2.html">酷玩</a></li>
+          <li><a href="../../index5.html">导购</a> </li>
+          <li><a href="../../index8.html">试用</a> </li>
+          <li><a href="./最新.html">报告</a> </li>
+        </ul>
+        <div class="seek">
+          <input type="text">
+          <button >注册</button>
+        </div>
+      </div>
+
+
+	<!-- 主体 -->
+    <section class="wrap play-top">
+		<h1>体验报告</h1>
+		<nav class="play-nav">
+			<a href="./最新.html" >最新</a>
+			<a href="./zuire.html" class="on">最热</a>
+		</nav>
+	</section> 
+    <section class="report-box">
+		<div class="wrap report pad25 fix">
+			<div class="listInfo left">
+				<ul id="myDiv">
+				</ul>
+				<div id="num"></div>
+				<div class="playMore">
+					<img src="../图片/css/img/more.png" alt="">
+					<a href="javascript:void(0);" class="more-btn" id="report-btn">点击加载更多</a>
+				</div>
+			</div>
+			<aside class="listR right">
+				<div class="ty">
+					<h2 class="title">极果体验师</h2>
+					<figure class="imgBox"><img src="../图片/img/tiyanImg.jpg"></figure>
+					<div class="info">
+						<h5>福利</h5>
+						<p class="text">第一时间体验新品，大众试用优先通过，还有定向邀请试用，新品玩到手软！</p>
+						<h5>要求</h5>
+						<p class="text">是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。</p>
+						<h5>申请</h5>
+						<p class="text">1. 关注极果公众号：jguojguo<br>（或扫描下方二维码）<br>2. 在公众号内回复：体验师</p>
+					</div>
+				</div>
+				<div class="guanzhu">
+					<h2 class="title">关注我们</h2>
+					<figure class="imgBox"><img src="../图片//img/myCode.jpg"></figure>
+				</div>
+			                                                                                                                        </aside>
+		</div>
+	</section>
+     <!-- 尾部 -->
+	 <div class="stern">
+		<img src="../图片/img/code.png" alt="">
+		<div class="ku">
+		  <p>酷·新奇·好玩·品质</p>
+		  <p>全球酷玩试用导购平台</p><br>
+		   <p>微信添加“JguoJguo”</p>
+		   <p>获取我们的服务。</p>
+		 </div>
+		
+		<img class="img1" src="../图片/img/logoImg.jpg" alt="">
+		
+		<ul>
+		  <p>免费试用</p>
+		  <li>试用流程</li>
+		  <li>如何提高成功率</li>
+		 
+		</ul>
+		<ul id="friendship">
+		 <p>友情链接</p>
+		 <li>智东西 </li>
+		 <li>搜狐IT</li>
+		 <li>搜狐数码</li>
+		 <li>凤凰数码</li>
+		 <li>泡泡网</li>
+		 <li>ZUK社区</li>
+		 <li>极客公园 </li>
+		 
+		 <li>果库</li>
+		 <li>腾讯科技</li>
+		 <li>凤凰科技</li>
+		 <li>PConline</li>
+		 <li>3W咖啡</li>
+		 <li>亿觅emie</li>
+		 <li>易迅易启玩</li>
+	   </ul>
+	   <ul>
+		 <p>购买攻略</p>
+		 <li>美亚海淘教程</li>
+		 <li>日亚海淘教程</li>
+		 <li>海淘转运攻略</li>
+		 <li>kickstarter 众筹购买攻略</li>
+		 <li>kickstarter 众筹购买攻略
+	   </ul>
+	   <ul>
+		 <p>厂商合作</p>
+		 <li>联系我们</li>
+		 <li>商务合作：BD@jiguo.com</li>
+		 <li>CEO邮箱：CEO@jiguo.com</li>
+	   </ul>
+	   </div>
+	   <a href="javascript:void(0);" class="backTop" id="back" style="position: fixed; left: 1400px; top: 650px; display: block;">返回顶部</a>
+</body>
+</html>
+<script src="./template-web.js"></script>
+<script type="text/html" id="myfirst">
+    {{each value}}
+    
+        <div class="kuang">
+            <img src="{{$value.img}}" alt="" width="700" height="260">
+            <h5>{{$value.text}}</h5>
+			<span>{{$value.uName}}</span>
+			<span>{{$value.endTime}}</span>
+            <!-- <p class="money">{{$value.price}}</p> -->
+            <p class="fang">
+                <span class="a">{{$value.num}}</span>
+                <span class="b">{{$value.apply}}</span>
+            </p>
+			<div class="unnm">{{$value.text}}</div>
+        </div>
+    {{/each}}
+</script>
+
+<script>
+   var myajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    myajax.open('get', 'http://192.168.31.110:3000/useing/master', true);
+    myajax.send();
+    myajax.onreadystatechange = function () {
+        if (myajax.readyState == 4) {
+            if (myajax.status == 200) {
+                var data = JSON.parse(myajax.responseText)
+                console.log(data);
+
+                // 数据渲染模板中
+                var html_ = template('myfirst', {
+                    value: data,
+                    a: data
+                })
+                // 把返回的html模板字符串通过innerHTML添加到页面
+
+                num.innerHTML = html_;
+
+            }
+        }
+    }
+</script>

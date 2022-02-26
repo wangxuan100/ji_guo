@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+
+    width: 100%;
+    position: relative;
+}
+
+.toubu{
+    width: 1000px;
+    height: 100px;
+    background: url(../img/logonew.png) no-repeat;
+    background-size: 150px;
+    margin: 10px 10px;
+    padding: 0 250px;
+    position: relative;
+   
+}
+.toubu .ku{
+    color: red;
+}
+.toubu a{
+    text-decoration: none;
+    margin: 0 14px;
+    font-size: 40px;
+    margin-left: 75px;
+    font-size: 20px;
+    line-height: 80px;
+    color: black;
+}
+.toubu a:hover{
+    color: red;
+    z-index: 999;
+}
+.deng,.zhu{
+    width: 40px;
+    height: 30px;
+    border: 1px solid red;
+    margin: 10px 10px;
+}
+.deng a,.zhu a{
+    text-decoration: none;
+    color: red;
+}
+.jing{
+    position: absolute;
+    top: 20px;
+    left: 1070px;
+}
+.jing_j{
+    width: 25px;
+    height: 25px;
+    background: url(./img/search.png) no-repeat;
+    position: absolute;
+    top: 32px;
+    left: 1033px;
+}
+
+.hr_{
+color: gray;
+margin: -20px 0;
+}
+
+/* 发现酷玩 */
+
+.fa span{
+    font-size: 30px;
+    position: absolute;
+    top: 113px;
+    left: 680px;
+}
+
+
+.zui span{
+    font-size: 18px;
+    margin: 0 50px;
+    /* color: gray; */
+}
+.zui a{
+    text-decoration: none;
+}
+.new{
+    color: red;
+    border-bottom: 3px solid red;
+}
+.re{
+    color: gray;
+}
+.zui{
+    position: absolute;
+    top: 180px;
+    left: 600px;
+}
+.new{
+    color: red;
+}
+
+
+#fa_box{
+    width: 1522px;
+    height: 1460px;
+    background-color: #F7F7F7;
+    /* margin: 140px 11px; */
+    margin-top: 140px;
+    border: 1px solid gainsboro ;
+    /* position: relative; */
+}
+.kuang{
+    width: 320px;
+    height: 290px;
+    float: left;
+    margin: 27px;
+    border: 1px solid gainsboro ;
+    border-radius: 10px;
+   
+}
+.kuang h5{
+    font-weight: normal;
+    color: gray;
+    width: 400px;
+}
+/* .money{
+    color: red;
+}
+.money{
+    margin: 40px 0;
+} */
+.fang span{
+    float: right;
+    margin: -80px 10px;
+    width: 50px;
+    text-align: center;
+}
+.fang{
+    position: relative;
+}
+.a{
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+    color: gray;
+    background: url(./img/xin.png) no-repeat 0px 5px;
+}
+.b{
+    position: absolute;
+    bottom: 30px;
+    right: 42px;
+    color: gray;
+    background: url(./img/reply.png) no-repeat 0px 5px;
+}
+.duo{
+    position: absolute;
+    top: 1615px;
+    left: 716px;
+    font-size: 20px;
+    color: red;
+    width: 200px;
+    text-align: center;
+    background: url(./img/more.png) no-repeat 16px 12px;
+}
+
+

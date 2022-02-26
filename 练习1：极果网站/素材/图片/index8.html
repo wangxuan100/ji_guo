@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index8.css">
+    <link rel="stylesheet" href="./html/底部.css">
+</head>
+
+<body>
+    <div class="box">
+        <!-- 极果头部 -->
+        <div class="toubu">
+            <a href="">首页</a>
+            <a href="./index2.html">酷玩</a>
+            <a href="./index5.html">导购</a>
+            <a href="" class="shi">试用</a>
+            <a href="../../素材/图片/极果_体验报告/体验报告模块/最新.html">报告</a>
+        </div>
+        <div class="jing_j"></div>
+        <div class="jing">
+            <!-- <button class="deng"><a href="">登录</a></button> -->
+            <button class="zhu"><a href="./注册页面.html">注册</a></button>
+        </div>
+        <hr class="hr_">
+        <!-- 发现酷玩 -->
+
+        <div class="fa">
+            <span>免费试用</span>
+        </div>
+
+        <div class="daa">
+            <a href=""><span class="d_a">大众试用</span></a>
+           <a href="./试用模块2.html"><span>体验师专项</span></a>
+        </div>
+
+        <div class="zui">
+            <a href="./index8.html"><span >全部</span></a>
+            <a href=""><span class="new">申请中</span></a>
+            <a href="./index10.html"><span>试用中</span></a>
+            <a href="./index11.html"><span>已结束</span></a>
+        </div>
+        <!-- 渲染 -->
+        <div class="over">
+            <div id="fa_box"></div>
+        </div>
+        
+
+        </div>
+        <div class="duo">
+            <p>点击加载更多</p>
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="stern">
+            <img src="./img/code.png" alt="">
+            <div class="ku">
+                <p>全球酷玩试用导购平台</p>
+                <p>酷·新奇·好玩·品质</p><br>
+                <p>微信添加“JguoJguo”</p>
+                <p>获取我们的服务。</p>
+            </div>
+
+            <img class="img1" src="./img/logoImg.jpg" alt="">
+
+            <ul>
+                <p>免费试用</p>
+                <li>试用流程</li>
+                <li>如何提高成功率</li>
+
+            </ul>
+            <ul id="friendship">
+                <p>友情链接</p>
+                <li>智东西 </li>
+                <li>搜狐IT</li>
+                <li>搜狐数码</li>
+                <li>凤凰数码</li>
+                <li>泡泡网</li>
+                <li>ZUK社区</li>
+                <li>极客公园 </li>
+
+                <li>果库</li>
+                <li>腾讯科技</li>
+                <li>凤凰科技</li>
+                <li>PConline</li>
+                <li>3W咖啡</li>
+                <li>亿觅emie</li>
+                <li>易迅易启玩</li>
+            </ul>
+            <ul>
+                <p>购买攻略</p>
+                <li>美亚海淘教程</li>
+                <li>日亚海淘教程</li>
+                <li>海淘转运攻略</li>
+                <li>kickstarter 众筹购买攻略</li>
+                <li>kickstarter 众筹购买攻略
+            </ul>
+            <ul>
+                <p>厂商合作</p>
+                <li><a class="aaa" href="../帮助与合作模块/帮助.html">联系我们</a> </li>
+
+                <li><a class="aaa" href="../帮助与合作模块/合作.html"> 商务合作：BD@jiguo.com</a></li>
+                <li>CEO邮箱：CEO@jiguo.com</li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="backTop" id="back"
+            style="position: fixed; left: 1400px; top: 650px; display: block;">返回顶部</a>
+
+
+
+    </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- 创建模板 -->
+<script type="text/html" id="myfirst">
+    {{each value}}
+    
+        <div class="kuang">
+            <img src="{{$value.img}}" alt="" width="320" height="160">
+            <h5>{{$value.text}}</h5>
+            <div class="mon_b">
+                <span class="money">{{$value.totalnum}}</span>
+                <span class="mon">{{$value.num}}</span>
+            </div>
+           
+            <p class="fang">
+                <span class="a">{{$value.apply}}</span>
+               
+            </p>
+        </div>
+
+    
+    {{/each}}
+
+
+
+    <!-- {{each a}}
+    <div class="kuang">
+        <img src="{{$value.img}}" alt="" width="320" height="160">
+        <h5>{{$value.text}}</h5>
+        <p class="money">{{$value.price}}</p>
+        <p class="fang">
+            <span class="a">{{$value.like}}</span>
+            <span class="b">{{$value.words}}</span>
+        </p>
+    </div>
+    {{/each}} -->
+
+
+</script>
+
+<script src="./css/template-web.js"></script>
+
+<script>
+    var myajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    myajax.open('get', 'http://192.168.31.110:3000/report/new', true);
+    myajax.send();
+    myajax.onreadystatechange = function () {
+        if (myajax.readyState == 4) {
+            if (myajax.status == 200) {
+                var data = JSON.parse(myajax.responseText)
+                console.log(data);
+
+                // 数据渲染模板中
+                var html_ = template('myfirst', {
+                    value: data,
+                    a: data
+                })
+                // 把返回的html模板字符串通过innerHTML添加到页面
+
+                fa_box.innerHTML = html_;
+
+            }
+        }
+    }
+</script>
